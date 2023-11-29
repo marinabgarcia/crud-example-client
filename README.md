@@ -1,6 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <a href="http://nextjs.com/" target="blank"><img src="https://testrigor.com/wp-content/uploads/2023/04/nextjs-logo-square.png" width="200" alt="Next Logo" /></a>
+</p>
 
-## Getting Started
+## Description
+
+Example Front for CRUD Application aplying concepts of  Clean arquitecture
+
+## Technologies
+
+Typescript, NextJS, MaterialUI, Resposive design 
 
 First, run the development server:
 
@@ -14,23 +22,34 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3001) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Situation
+'M&O Accountants' process requirements and data validations as well as notify about missing receipts and
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+approvals for monthly reports. Jesus, our best and only developer was assigned to create a form input with the following fields:
 
-## Learn More
+Contacting Company's Name
 
-To learn more about Next.js, take a look at the following resources:
+Fiscal ID Code
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Client Number
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Receipts List - Each one with:
 
-## Deploy on Vercel
+Date
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Tax Amount
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Tax Percentage
+
+We need to check that the Fiscal ID is valid in an external API. This process should be non-blocking and provide some kind of notification to the user that the input was processed correctly. Our accountants should be able to have a screen that shows them all the forms that were entered and checked by the API and be able to approve them (with an approve button is enough).
+
+### Assumptions
+- The client number is unique and it is generated manually by the user
+- The receipts list is not mandatory
+- The receipts list can have more than one receipt
+- The receipts list can have repeated receipts
+- The fiscal id code is not unique
+- The resources are public
+- All the users can perform all the actions
