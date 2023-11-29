@@ -12,6 +12,12 @@ Typescript, NextJS, MaterialUI, Resposive design
 
 First, run the development server:
 
+Using node v20.10.0
+
+```bash
+npm install
+```
+
 ```bash
 npm run dev
 # or
@@ -22,7 +28,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3001) with your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
 
 ## Situation
 'M&O Accountants' process requirements and data validations as well as notify about missing receipts and
